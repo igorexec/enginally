@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-test.todo('renders');
+test.todo('renders')
 
 // import { render } from '@testing-library/react';
 // test('renders learn react link', () => {

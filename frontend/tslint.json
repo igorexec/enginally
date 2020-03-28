@@ -1,0 +1,47 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:latest",
+    "tslint-react",
+    "tslint-react-hooks",
+    "tslint-react-a11y"
+  ],
+  "rules": {
+    "quotemark": {
+      "options": ["single", "jsx-double"]
+    },
+    "trailing-comma": {
+      "options": {
+        "multiline": "always",
+        "singleline": "never"
+      }
+    },
+    "eofline": true,
+    "ordered-imports": false,
+    "no-default-export": true,
+    "max-line-length": {
+      "options": {
+        "limit": 150
+      }
+    },
+    "indent": {
+      "options": "spaces"
+    },
+    "interface-name": false,
+    "arrow-parens": false,
+    "no-implicit-dependencies": false,
+    "member-access": {
+      "options": "no-public"
+    },
+    "jsx-space-before-trailing-slash": true,
+    "jsx-self-close": true,
+    "jsx-boolean-value": {
+      "options": "never"
+    },
+    "prettier": true,
+    "semicolon": {
+      "options": "never"
+    },
+    "react-a11y-lang": true
+  }
+}

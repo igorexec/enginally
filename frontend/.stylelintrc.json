@@ -1,0 +1,10 @@
+{
+    "plugins": ["stylelint-order"],
+    "rules": {
+        "order/order": ["declarations", "custom-properties", "at-rules", "rules"],
+        "order/properties-alphabetical-order": true,
+
+        "comment-no-empty": true,
+        "color-no-invalid-hex": true
+    }
+}

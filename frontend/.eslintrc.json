@@ -27,7 +27,8 @@
       ]
     }],
     
-    "react/self-closing-comp": ["error", {"component": true}]
+    "react/self-closing-comp": ["error", {"component": true}],
+    "react/prefer-stateless-function": "error"
   },
   "overrides": [
     {

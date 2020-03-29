@@ -23,7 +23,8 @@
     "import/no-default-export": "error",
     "import/no-internal-modules": ["error", {
       "allow": [
-        "@core/ui-kit/*"
+        "@core/ui-kit/*",
+        "@testing-library/**"
       ]
     }],
     

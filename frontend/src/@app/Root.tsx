@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
-import { Home, EventLoop } from '@pages'
+import { Web, Home } from '@pages'
 
 export const Root: FC = () => {
   return (
@@ -8,7 +8,7 @@ export const Root: FC = () => {
       <BrowserRouter>
         <Switch>
           <Route path="/" component={Home} exact />
-          <Route path="/event-loop" component={EventLoop} />
+          <Route path="/web" component={Web} />
           <Redirect to="/" />
         </Switch>
       </BrowserRouter>

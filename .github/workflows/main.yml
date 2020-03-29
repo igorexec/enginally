@@ -28,6 +28,21 @@ jobs:
         # Version Spec of the version to use.  Examples: 10.x, 10.15.1, >=10.15.0, lts
         version: 13
         
-    - name: Run code checks
-      run: npm run check
+    - name: Install dependencies
+      run: npm install
       working-directory: frontend
+  
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Style checks
+        run: npm run stylelint
+        working-directory: frontend
+        
+      - name: Code linting
+        run: npm run eslint
+        working-directory: frontend
+      
+      - name: Run frontend tests
+        run: npm run test -- --watchAll=false --coverage
+        working-directory: frontend

@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "react-app"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "import",
+    "react"
+  ],
+  "rules": {
+    "semi": ["error", "never"],
+    "quotes": ["error", "single"],
+    "jsx-quotes": ["error", "double"],
+    "comma-dangle": ["error", "always-multiline"],
+    "eol-last": ["error", "always"],
+    "import/no-default-export": "error",
+    "max-len": ["error", {"code": 150}],
+    "arrow-parens": ["error", "always"],
+    "arrow-body-style": ["error", "always"],
+    "react/self-closing-comp": ["error", {"component": true}]
+  },
+  "parser": "@typescript-eslint/parser"
+}

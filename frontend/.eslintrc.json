@@ -1,4 +1,5 @@
 {
+  "root": true,
   "extends": [
     "react-app"
   ],
@@ -10,14 +11,26 @@
   "rules": {
     "semi": ["error", "never"],
     "quotes": ["error", "single"],
-    "jsx-quotes": ["error", "double"],
+    "jsx-quotes": ["error", "prefer-double"],
     "comma-dangle": ["error", "always-multiline"],
     "eol-last": ["error", "always"],
-    "import/no-default-export": "error",
     "max-len": ["error", {"code": 150}],
     "arrow-parens": ["error", "always"],
     "arrow-body-style": ["error", "always"],
+    "no-console": "error",
+    
+    "import/no-default-export": "error",
+    "import/no-relative-parent-imports": "error",
+    
     "react/self-closing-comp": ["error", {"component": true}]
   },
+  "overrides": [
+    {
+      "files": ["src/serviceWorker.ts"],
+      "rules": {
+        "no-console": "off"
+      }
+    }
+  ],
   "parser": "@typescript-eslint/parser"
 }

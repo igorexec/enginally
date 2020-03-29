@@ -1,3 +1,5 @@
-export {Atom} from './atoms'
+export { Atom } from './atoms'
 
-export {Molecule} from './molecules'
+export { Molecule } from './molecules'
+
+export { Organism } from './organisms'

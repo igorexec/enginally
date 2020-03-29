@@ -1,1 +1,1 @@
-export {Molecule} from './molecule'
+export { Molecule } from './molecule'

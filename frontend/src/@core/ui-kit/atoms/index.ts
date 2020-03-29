@@ -1,1 +1,1 @@
-export {Atom} from './atom'
+export { Atom } from './atom'

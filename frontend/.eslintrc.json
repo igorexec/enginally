@@ -18,6 +18,7 @@
     "arrow-parens": ["error", "always"],
     "arrow-body-style": ["error", "always"],
     "no-console": "error",
+    "object-curly-spacing": ["error", "always"],
     
     "import/no-default-export": "error",
     "import/no-internal-modules": ["error", {

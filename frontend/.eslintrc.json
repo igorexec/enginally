@@ -31,7 +31,7 @@
         "@testing-library/**"
       ]
     }],
-    "import/order": "error",
+    "import/order": ["error", {"groups": [["builtin", "external", "internal"]], "newlines-between": "always"}],
     "import/no-restricted-paths": ["error", {
       "zones": [
         {"target": "./src/@core/ui-kit/atoms", "from": "./src/@core/ui-kit"},

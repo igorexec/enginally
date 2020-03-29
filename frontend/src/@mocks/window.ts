@@ -8,6 +8,16 @@ export const mockWindowSize = (width: number, height: number) => {
 }
 
 export const restoreWindowSize = () => {
-  Object.defineProperty(window, 'innerWidth', { value: originalWidth })
-  Object.defineProperty(window, 'innerHeight', { value: originalHeight })
+  mockWindowSize(originalWidth, originalHeight)
+}
+
+export const mockMatchMedia = (matches: boolean) => {
+  Object.defineProperty(window, 'matchMedia', {
+    writable: true,
+    value: jest.fn().mockImplementation(() => {
+      return {
+        matches,
+      }
+    }),
+  })
 }

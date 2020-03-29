@@ -1,34 +1,35 @@
 import React from 'react'
 import { render } from '@testing-library/react'
+import { mockMatchMedia } from '@mocks/window'
+
 import { Responsive } from '../Responsive'
 
+beforeEach(() => {
+  mockMatchMedia(false)
+})
 
-// test('renders children when viewport > minWidth and < maxWidth', () => {
-//   const { getByText } = render(
-//     <Responsive minWidth={0} maxWidth={1024}>
-//       content
-//     </Responsive>,
-//   )
-//   const children = getByText('content')
-//   expect(children).not.toBeEmpty()
-// })
+afterEach(() => {
+  mockMatchMedia(false)
+})
 
-// test('does not render when viewport when viewport > maxWidth', () => {
-//   const { getByText } = render(
-//     <Responsive minWidth={0} maxWidth={1024}>
-//       content
-//     </Responsive>,
-//   )
-//   const children = getByText(/content/i)
-//   expect(children).toBeEmpty()
-// })
+test('renders children when viewport matches media', () => {
+  mockMatchMedia(true)
+  const { queryByText } = render(
+    <Responsive minWidth={0} maxWidth={1024}>
+      content
+    </Responsive>,
+  )
+  const children = queryByText('content')
+  expect(children).not.toBeNull()
+})
 
-// test('does not render children when viewport < minWidth', () => {
-//   const { getByText } = render(
-//     <Responsive minWidth={0} maxWidth={1024}>
-//       content
-//     </Responsive>,
-//   )
-//   const children = getByText('content')
-//   expect(children).toBeEmpty()
-// })
+test('does not render when viewport does not match media', () => {
+  mockMatchMedia(false)
+  const { queryByText } = render(
+    <Responsive minWidth={0} maxWidth={1024}>
+      content
+    </Responsive>,
+  )
+  const children = queryByText('content')
+  expect(children).toBeNull()
+})

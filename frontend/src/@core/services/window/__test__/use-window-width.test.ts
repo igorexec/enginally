@@ -1,6 +1,7 @@
 import { renderHook, act } from '@testing-library/react-hooks'
-import { useWindowWidth } from '../use-window-width'
 import { mockWindowSize, restoreWindowSize } from '@mocks/window'
+
+import { useWindowWidth } from '../use-window-width'
 
 beforeAll(() => {
   mockWindowSize(1024, 768)

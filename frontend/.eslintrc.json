@@ -33,7 +33,8 @@
     }],
     
     "react/self-closing-comp": ["error", {"component": true}],
-    "react/prefer-stateless-function": "error"
+    "react/prefer-stateless-function": "error",
+    "react/jsx-space-before-closing": "error"
   },
   "overrides": [
     {

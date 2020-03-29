@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import { Home, EventLoop } from '@pages'
 
 export const Root: FC = () => {
@@ -7,8 +7,9 @@ export const Root: FC = () => {
     <React.StrictMode>
       <BrowserRouter>
         <Switch>
-          <Route path="/" component={Home} />
+          <Route path="/" component={Home} exact />
           <Route path="/event-loop" component={EventLoop} />
+          <Redirect to="/" />
         </Switch>
       </BrowserRouter>
     </React.StrictMode>

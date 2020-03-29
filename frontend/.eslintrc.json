@@ -19,11 +19,15 @@
     "arrow-body-style": ["error", "always"],
     "no-console": "error",
     "object-curly-spacing": ["error", "always"],
+    "no-empty-function": "error",
     
     "import/no-default-export": "error",
     "import/no-internal-modules": ["error", {
       "allow": [
         "@core/ui-kit/*",
+        "@core/services/*",
+        "@core/public-components/*",
+        "@core/lib/*",
         "@testing-library/**"
       ]
     }],

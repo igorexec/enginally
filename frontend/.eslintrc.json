@@ -37,7 +37,8 @@
         {"target": "./src/@core/ui-kit/atoms", "from": "./src/@core/ui-kit"},
         {"target": "./src/@core/ui-kit/molecules", "from": "./src/@core/ui-kit", "except": ["./atoms"]},
         {"target": "./src/@core/ui-kit/organisms", "from": "./src/@core/ui-kit", "except": ["./atoms", "./molecules"]},
-        {"target": "./src/@core/ui-kit/layout", "from": "./src/@core/ui-kit"}
+        {"target": "./src/@core/ui-kit/layout", "from": "./src/@core/ui-kit"},
+        {"target": "./src/@core/ui-kit", "from": "./src/@core/public-components"}
       ]
     }],
     

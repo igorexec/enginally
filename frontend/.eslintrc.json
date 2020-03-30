@@ -28,7 +28,8 @@
         "@core/services/*",
         "@core/public-components/*",
         "@core/lib/*",
-        "@testing-library/**"
+        "@testing-library/**",
+        "@configs/design/*"
       ]
     }],
     "import/order": ["error", {"groups": [["builtin", "external", "internal"]], "newlines-between": "always"}],

@@ -10,6 +10,7 @@ beforeEach(() => {
 
 afterEach(() => {
   restoreWindowSize()
+  jest.clearAllTimers()
   jest.useRealTimers()
 })
 

@@ -5,6 +5,7 @@ beforeAll(() => {
 })
 
 afterAll(() => {
+  jest.clearAllTimers()
   jest.useRealTimers()
 })
 
@@ -34,6 +35,6 @@ test('calls function twice if twice timer finished', () => {
   throttledFn()
   throttledFn()
   jest.advanceTimersByTime(3000)
-  
+
   expect(sourceFn).toHaveBeenCalledTimes(2)
 })

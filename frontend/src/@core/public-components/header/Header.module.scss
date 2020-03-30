@@ -1,0 +1,11 @@
+@import "@configs/design/settings/colors.scss";
+
+.header {
+  background: $light;
+  height: 5rem;
+  width: 100%;
+
+  &__title {
+    margin: 0;
+  }
+}

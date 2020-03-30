@@ -1,16 +1,16 @@
 import React from 'react'
-import { Responsive } from '@core/ui-kit'
-import { ScreenSizes } from '@configs/design'
+import classNames from 'classnames'
+
+import { COMPONENT_NAME } from './constants'
+import styles from './Header.module.scss'
 
 export const Header = () => {
+  const headerClasses = classNames(styles['header'])
+  const headerTitleClasses = classNames(styles['header__title'])
+
   return (
-    <>
-      <Responsive maxWidth={ScreenSizes.Large}>
-        <div>mobile</div>
-      </Responsive>
-      <Responsive minWidth={ScreenSizes.Large}>
-        <div>Desktop</div>
-      </Responsive>
-    </>
+    <header className={headerClasses} data-testid={COMPONENT_NAME}>
+      <h1 className={headerTitleClasses}>Enginally</h1>
+    </header>
   )
 }

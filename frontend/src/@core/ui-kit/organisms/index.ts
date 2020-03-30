@@ -1,1 +1,0 @@
-export { Organism } from './organism'

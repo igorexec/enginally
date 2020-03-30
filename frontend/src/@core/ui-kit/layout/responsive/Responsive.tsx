@@ -6,7 +6,7 @@ type Props = {
   maxWidth?: number;
 }
 
-export const Responsive: FC<Props> = ({ children, minWidth = 0, maxWidth }) => {
+export const Responsive: FC<Props> = ({ children, minWidth, maxWidth }) => {
   const matches = useMatchesScreenWidth({ minWidth, maxWidth })
 
   if (matches) {

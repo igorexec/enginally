@@ -7,10 +7,6 @@ export const mockWindowSize = (width: number, height: number) => {
   window.dispatchEvent(new Event('resize'))
 }
 
-export const restoreWindowSize = () => {
-  mockWindowSize(originalWidth, originalHeight)
-}
-
 export const mockMatchMedia = (matches: boolean) => {
   Object.defineProperty(window, 'matchMedia', {
     writable: true,
@@ -20,4 +16,8 @@ export const mockMatchMedia = (matches: boolean) => {
       }
     }),
   })
+}
+
+export const restoreWindowSize = () => {
+  mockWindowSize(originalWidth, originalHeight)
 }

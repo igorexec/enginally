@@ -3,12 +3,14 @@ import { mockWindowSize, restoreWindowSize } from '@mocks/window'
 
 import { useWindowWidth } from '../use-window-width'
 
-beforeAll(() => {
+beforeEach(() => {
   mockWindowSize(1024, 768)
+  jest.useFakeTimers()
 })
 
-afterAll(() => {
+afterEach(() => {
   restoreWindowSize()
+  jest.useRealTimers()
 })
 
 test('returns window width', () => {
@@ -19,12 +21,23 @@ test('returns window width', () => {
   expect(result.current).toEqual(1024)
 })
 
-test('returns new width after resize', () => {
+test('does not return new width instantly after resize', () => {
   const { result } = renderHook(() => {
     return useWindowWidth()
   })
   act(() => {
     mockWindowSize(1023, 767)
+  })
+  expect(result.current).toEqual(1024)
+})
+
+test('returns new width after resize with delay', () => {
+  const { result } = renderHook(() => {
+    return useWindowWidth()
+  })
+  act(() => {
+    mockWindowSize(1023, 767)
+    jest.runTimersToTime(300)
   })
   expect(result.current).toEqual(1023)
 })

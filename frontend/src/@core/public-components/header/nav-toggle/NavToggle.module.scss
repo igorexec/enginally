@@ -1,13 +1,5 @@
 @import "@configs/design/settings/colors.scss";
 
-@mixin toggler-line {
-  background: $gray;
-  border-radius: 20px;
-  height: 2px;
-  position: absolute;
-  width: 40%;
-}
-
 .nav-toggle {
   cursor: pointer;
   display: flex;
@@ -17,6 +9,14 @@
   position: absolute;
   top: 0;
   width: 3.5rem;
+
+  &:before, &:after {
+    background: $gray;
+    border-radius: 20px;
+    height: 2px;
+    position: absolute;
+    width: 40%;
+  }
 
   &:before {
     content: '';

@@ -6,6 +6,6 @@ export const NavToggle = () => {
   const classes = styles['nav-toggle']
 
   return (
-    <span className={classes} />
+    <span className={classes} data-testid="NavToggle" />
   )
 }

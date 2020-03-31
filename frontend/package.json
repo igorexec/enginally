@@ -76,5 +76,10 @@
       "!src/**/index.ts",
       "!@mocks/*"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "./scripts/commit-msg-check.sh"
+    }
   }
 }

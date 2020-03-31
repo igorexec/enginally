@@ -9,6 +9,8 @@
     "react"
   ],
   "rules": {
+    "indent": ["error", 2],
+    "no-multiple-empty-lines": ["error", {"max": 1, "maxEOF": 0}],
     "semi": ["error", "never"],
     "quotes": ["error", "single"],
     "jsx-quotes": ["error", "prefer-double"],
@@ -20,6 +22,7 @@
     "no-console": "error",
     "object-curly-spacing": ["error", "always"],
     "no-empty-function": "error",
+    "no-nested-ternary": "error",
     
     "import/no-default-export": "error",
     "import/no-internal-modules": ["error", {
@@ -47,8 +50,10 @@
     "react/self-closing-comp": ["error", {"component": true}],
     "react/prefer-stateless-function": "error",
     "react/boolean-prop-naming": ["error", {"rule": "^(is|has)[A-Z]([A-Za-z0-9]?)+"}],
+    "react/jsx-max-depth": ["error", {"max": 8}],
 
-    "@typescript-eslint/semi": ["error", "never"]
+    "@typescript-eslint/semi": ["error", "never"],
+    "@typescript-eslint/no-explicit-any": "error"
   },
   "overrides": [
     {

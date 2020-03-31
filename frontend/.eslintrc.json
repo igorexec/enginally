@@ -36,7 +36,13 @@
         "@configs/design/*"
       ]
     }],
-    "import/order": ["error", {"groups": [["builtin", "external", "internal"]], "newlines-between": "always"}],
+    "import/order": ["error", {
+      "groups": [["builtin", "external", "internal"]],
+      "newlines-between": "always",
+      "pathGroups": [
+        {"pattern": "./*.scss", "group": "sibling", "position": "after"}
+      ]
+    }],
     "import/no-restricted-paths": ["error", {
       "zones": [
         {"target": "./src/@core/ui-kit/atoms", "from": "./src/@core/ui-kit"},

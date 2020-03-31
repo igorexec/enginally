@@ -1,19 +1,18 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import { mockMatchMedia } from '@mocks/window'
+import { mockMatchMedia, mockWindowSize } from '@mocks/window'
 
 import { Responsive } from '../Responsive'
 
-beforeEach(() => {
-  mockMatchMedia(false)
+beforeAll(() => {
+  mockMatchMedia()
 })
 
-afterEach(() => {
-  mockMatchMedia(false)
+beforeEach(() => {
+  mockWindowSize(1024, 768)
 })
 
 test('renders children when viewport matches media', () => {
-  mockMatchMedia(true)
   const { queryByText } = render(
     <Responsive minWidth={0} maxWidth={1024}>
       content
@@ -23,10 +22,9 @@ test('renders children when viewport matches media', () => {
   expect(children).not.toBeNull()
 })
 
-test('does not render when viewport does not match media', () => {
-  mockMatchMedia(false)
+test('does not render when does not match media', () => {
   const { queryByText } = render(
-    <Responsive minWidth={0} maxWidth={1024}>
+    <Responsive minWidth={0} maxWidth={1023}>
       content
     </Responsive>,
   )

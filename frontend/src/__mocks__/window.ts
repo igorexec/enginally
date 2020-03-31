@@ -7,12 +7,16 @@ export const mockWindowSize = (width: number, height: number) => {
   window.dispatchEvent(new Event('resize'))
 }
 
-export const mockMatchMedia = (matches: boolean) => {
+export const mockMatchMedia = () => {
   Object.defineProperty(window, 'matchMedia', {
     writable: true,
-    value: jest.fn().mockImplementation(() => {
+    value: jest.fn().mockImplementation((media) => {
+      const minWidth = /min-width: (.+?)px/.exec(media)
+      const maxWidth = /max-width: (.+?)px/.exec(media)
+      const minWidthMatches = minWidth ? minWidth[1] && window.innerWidth >= +minWidth[1] + 1 : true
+      const maxWidthMatches = maxWidth ? maxWidth[1] && window.innerWidth <= +maxWidth[1] + 1 : true
       return {
-        matches,
+        matches: minWidthMatches && maxWidthMatches,
       }
     }),
   })

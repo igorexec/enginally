@@ -9,7 +9,7 @@
     "react"
   ],
   "rules": {
-    "no-extra-parens": ["error", "functions", {"ignoreJSX": "multi-line"}],
+    "no-extra-parens": ["error", "all", {"ignoreJSX": "multi-line"}],
     "indent": ["error", 2],
     "no-multiple-empty-lines": ["error", {"max": 1, "maxEOF": 0}],
     "semi": ["error", "never"],

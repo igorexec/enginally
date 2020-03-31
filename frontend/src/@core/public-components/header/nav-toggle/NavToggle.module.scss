@@ -1,0 +1,32 @@
+@import "@configs/design/settings/colors.scss";
+
+@mixin toggler-line {
+  background: $gray;
+  border-radius: 20px;
+  height: 2px;
+  position: absolute;
+  width: 40%;
+}
+
+.nav-toggle {
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 3.5rem;
+
+  &:before {
+    content: '';
+    top: 1.2rem;
+    @include toggler-line();
+  }
+
+  &:after {
+    bottom: 1.2rem;
+    content: '';
+    @include toggler-line();
+  }
+}

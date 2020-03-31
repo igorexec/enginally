@@ -1,16 +1,17 @@
 import React from 'react'
-import classNames from 'classnames'
 
+import { NavToggle } from './nav-toggle'
 import { COMPONENT_NAME } from './constants'
 import styles from './Header.module.scss'
 
 export const Header = () => {
-  const headerClasses = classNames(styles['header'])
-  const headerTitleClasses = classNames(styles['header__title'])
+  const classes = styles['header']
+  const titleClasses = styles['header__title']
 
   return (
-    <header className={headerClasses} data-testid={COMPONENT_NAME}>
-      <h1 className={headerTitleClasses}>Enginally</h1>
+    <header className={classes} data-testid={COMPONENT_NAME}>
+      <NavToggle />
+      <h1 className={titleClasses}>Enginally</h1>
     </header>
   )
 }

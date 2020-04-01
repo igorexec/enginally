@@ -6,7 +6,8 @@
   "plugins": [
     "@typescript-eslint",
     "import",
-    "react"
+    "react",
+    "jest"
   ],
   "rules": {
     "no-extra-parens": ["error", "all", {"ignoreJSX": "multi-line"}],
@@ -62,7 +63,13 @@
     "react/jsx-closing-tag-location": "error",
 
     "@typescript-eslint/semi": ["error", "never"],
-    "@typescript-eslint/no-explicit-any": "error"
+    "@typescript-eslint/no-explicit-any": "error",
+
+    "jest/consistent-test-it": ["error", {"fn": "test"}],
+    "jest/no-commented-out-tests": "error",
+    "jest/no-export": "error",
+    "jest/no-focused-tests": "error",
+    "jest/expect-expect": "error"
   },
   "overrides": [
     {

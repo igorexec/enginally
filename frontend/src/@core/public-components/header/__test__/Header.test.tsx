@@ -28,7 +28,7 @@ test('renders desktop header', () => {
 })
 
 test('renders mobile header for mobile viewport', () => {
-  mockWindowSize(1024, 768)
+  mockWindowSize(1000, 768)
   const { getByTestId } = render(<Header />)
   expect(getByTestId('MobileMenu')).toBeInTheDocument()
 })

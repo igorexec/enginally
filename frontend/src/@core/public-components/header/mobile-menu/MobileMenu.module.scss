@@ -1,7 +1,7 @@
 @import "@configs/design/settings/colors.scss";
 
 .mobile-menu {
-  background: $dark-gray;
+  background: $light;
   height: 100%;
   margin: 0;
   opacity: 0.95;
@@ -9,8 +9,4 @@
   position: fixed;
   top: 0;
   width: 100%;
-}
-
-.nav-menu {
-  list-style: none;
 }

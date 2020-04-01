@@ -1,18 +1,16 @@
 import React, { FC } from 'react'
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
-import { Web, Home, ComputerScience } from '@pages'
-import { Header } from '@core/public-components'
+import { Provider } from 'react-redux'
+import { BrowserRouter } from 'react-router-dom'
+import { store } from '@core/store'
+
+import { App } from './App'
 
 export const Root: FC = () => (
   <React.StrictMode>
-    <Header />
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" component={Home} exact />
-        <Route path="/web" component={Web} />
-        <Route path="/cs" component={ComputerScience} />
-        <Redirect to="/" />
-      </Switch>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 )

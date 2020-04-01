@@ -18,7 +18,7 @@
     "jsx-quotes": ["error", "prefer-double"],
     "comma-dangle": ["error", "always-multiline"],
     "eol-last": ["error", "always"],
-    "max-len": ["error", {"code": 150}],
+    "max-len": ["error", {"code": 120}],
     "arrow-parens": ["error", "always"],
     "arrow-body-style": ["error", "as-needed"],
     "no-console": "error",
@@ -40,9 +40,14 @@
     }],
     "import/order": ["error", {
       "groups": [["builtin", "external", "internal"]],
-      "newlines-between": "always",
+      "newlines-between": "never",
       "pathGroups": [
-        {"pattern": "./*.scss", "group": "sibling", "position": "after"}
+        {"pattern": "./*.scss", "group": "sibling", "position": "after"},
+        {"pattern": "@pages", "group": "internal", "position": "after"},
+        {"pattern": "@core/**", "group": "internal", "position": "after"},
+        {"pattern": "@app/**", "group": "internal", "position": "after"},
+        {"pattern": "@configs/**", "group": "internal", "position": "after"},
+        {"pattern": "@types-local/**", "group": "internal", "position": "after"}
       ]
     }],
     "import/no-restricted-paths": ["error", {

@@ -8,7 +8,7 @@ export const Root: FC = () => (
     <Header />
     <BrowserRouter>
       <Switch>
-        {/* <Route path="/" component={Home} exact /> */}
+        <Route path="/" component={Home} exact />
         <Route path="/web" component={Web} />
         <Route path="/cs" component={ComputerScience} />
         <Redirect to="/" />

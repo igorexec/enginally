@@ -13,13 +13,13 @@ export const Header = () => {
 
   return (
     <header className={classes} data-testid="Header">
+      <h1 className={titleClasses}>Enginally</h1>
       <Responsive maxWidth={ScreenSizes.Large}>
         <MobileMenu />
       </Responsive>
       <Responsive minWidth={ScreenSizes.Large}>
         <DesktopMenu />
       </Responsive>
-      <h1 className={titleClasses}>Enginally</h1>
     </header>
   )
 }

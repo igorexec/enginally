@@ -33,7 +33,8 @@
         "@core/public-components/*",
         "@core/lib/*",
         "@testing-library/**",
-        "@configs/design/*"
+        "@configs/design/*",
+        "__mocks__/*"
       ]
     }],
     "import/order": ["error", {

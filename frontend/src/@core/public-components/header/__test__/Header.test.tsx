@@ -18,7 +18,7 @@ beforeAll(() => {
 
 test('renders header', () => {
   const { getByTestId } = render(<Header />)
-  expect(getByTestId('enginally/header')).toBeInTheDocument()
+  expect(getByTestId('Header')).toBeInTheDocument()
 })
 
 test('renders desktop header', () => {

@@ -3,7 +3,6 @@ import { Responsive } from '@core/ui-kit'
 import { ScreenSizes } from '@configs/design'
 
 import { DesktopMenu } from './desktop-menu'
-import { COMPONENT_NAME } from './constants'
 import { MobileMenu } from './mobile-menu'
 
 import styles from './Header.module.scss'
@@ -13,7 +12,7 @@ export const Header = () => {
   const titleClasses = styles['header__title']
 
   return (
-    <header className={classes} data-testid={COMPONENT_NAME}>
+    <header className={classes} data-testid="Header">
       <Responsive maxWidth={ScreenSizes.Large}>
         <MobileMenu />
       </Responsive>

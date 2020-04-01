@@ -10,9 +10,7 @@ afterAll(() => {
 })
 
 test('returns new function', () => {
-  const actual = throttle(() => {
-    return 1 + 1
-  }, 3000)
+  const actual = throttle(() => 1 + 1, 3000)
   expect(actual).toBeInstanceOf(Function)
 })
 

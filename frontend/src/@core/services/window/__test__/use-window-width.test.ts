@@ -15,17 +15,13 @@ afterEach(() => {
 })
 
 test('returns window width', () => {
-  const { result } = renderHook(() => {
-    return useWindowWidth()
-  })
+  const { result } = renderHook(() => useWindowWidth())
 
   expect(result.current).toEqual(1024)
 })
 
 test('does not return new width instantly after resize', () => {
-  const { result } = renderHook(() => {
-    return useWindowWidth()
-  })
+  const { result } = renderHook(() => useWindowWidth())
   act(() => {
     mockWindowSize(1023, 767)
   })
@@ -33,9 +29,7 @@ test('does not return new width instantly after resize', () => {
 })
 
 test('returns new width after resize with delay', () => {
-  const { result } = renderHook(() => {
-    return useWindowWidth()
-  })
+  const { result } = renderHook(() => useWindowWidth())
   act(() => {
     mockWindowSize(1023, 767)
     jest.runTimersToTime(300)

@@ -9,15 +9,11 @@ beforeAll(() => {
 })
 
 test('returns true once matches screen width', () => {
-  const { result } = renderHook(() => {
-    return useMatchesScreenWidth({ maxWidth: 1024 })
-  })
+  const { result } = renderHook(() => useMatchesScreenWidth({ maxWidth: 1024 }))
   expect(result.current).toBeTruthy()
 })
 
 test('return false once does not match screen width', () => {
-  const { result } = renderHook(() => {
-    return useMatchesScreenWidth({ maxWidth: 600 })
-  })
+  const { result } = renderHook(() => useMatchesScreenWidth({ maxWidth: 600 }))
   expect(result.current).toBeFalsy()
 })

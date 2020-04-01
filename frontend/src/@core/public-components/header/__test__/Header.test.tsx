@@ -4,13 +4,11 @@ import { mockMatchMedia, mockWindowSize } from '__mocks__/window'
 
 import { Header } from '../Header'
 
-jest.mock('@configs/design', () => {
-  return {
-    ScreenSizes: {
-      Large: 1024,
-    },
-  }
-})
+jest.mock('@configs/design', () => ({
+  ScreenSizes: {
+    Large: 1024,
+  },
+}))
 
 beforeAll(() => {
   mockMatchMedia()
@@ -30,5 +28,5 @@ test('renders desktop header', () => {
 test('renders mobile header for mobile viewport', () => {
   mockWindowSize(1000, 768)
   const { getByTestId } = render(<Header />)
-  expect(getByTestId('MobileMenu')).toBeInTheDocument()
+  expect(getByTestId('NavToggle')).toBeInTheDocument()
 })

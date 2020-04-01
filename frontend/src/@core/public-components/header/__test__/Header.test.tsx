@@ -1,12 +1,15 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 import { mockMatchMedia, mockWindowSize } from '__mocks__/window'
-import { SCSS_MOCK } from '__mocks__/scss'
 
 import { Header } from '../Header'
 
-jest.mock('@configs/design/export.module.scss', () => {
-  return SCSS_MOCK
+jest.mock('@configs/design', () => {
+  return {
+    ScreenSizes: {
+      Large: 1024,
+    },
+  }
 })
 
 beforeAll(() => {

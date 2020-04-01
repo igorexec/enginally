@@ -5,7 +5,7 @@ import { NavMenu } from './nav-menu'
 import styles from './MobileMenu.module.scss'
 
 type Props = {
-  navItems?: NavigationItem[];
+  navItems: NavigationItem[];
 }
 
 export const MobileMenu: FC<Props> = ({ navItems }) => {

@@ -4,11 +4,11 @@ import { NavigationItem } from '@types-local/navigation'
 import styles from './NavMenu.module.scss'
 
 type Props = {
-  items?: NavigationItem[];
+  items: NavigationItem[];
   onItemClick?: () => void
 }
 
-export const NavMenu: FC<Props> = ({ onItemClick, items = [] }) => {
+export const NavMenu: FC<Props> = ({ onItemClick, items }) => {
   const classes = styles['nav-menu']
   const itemClasses = styles['nav-menu__item']
   const linkClasses = styles['nav-menu__link']

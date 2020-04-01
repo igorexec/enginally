@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { FC } from 'react'
+import classNames from 'classnames'
 
 import styles from './NavToggle.module.scss'
 
-export const NavToggle = () => {
-  const classes = styles['nav-toggle']
+type Props = {
+  isOpen?: boolean;
+  onClick?: () => void;
+}
 
-  return <span className={classes} data-testid="NavToggle" />
+export const NavToggle: FC<Props> = ({ isOpen = false, onClick }) => {
+  const classes = classNames(styles['nav-toggle'], { [styles['nav-toggle--opened']]: isOpen })
+
+  return <span className={classes} data-testid="NavToggle" onClick={onClick} />
 }

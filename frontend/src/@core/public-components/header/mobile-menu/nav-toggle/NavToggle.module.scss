@@ -11,21 +11,38 @@
   top: 0;
   width: 3.5rem;
 
-  &:before, &:after {
+  &::before, &::after {
     background: $gray;
     border-radius: 20px;
     height: 2px;
     position: absolute;
+    transition: transform 0.2s ease-in-out, margin 0.2s ease-in-out;
     width: 40%;
   }
 
-  &:before {
+  &::before {
     content: '';
     top: 1.2rem;
   }
 
-  &:after {
+  &::after {
     bottom: 1.2rem;
     content: '';
+  }
+
+  &:hover::after, &:hover::before {
+    background: $dark-gray;
+  }
+
+  &--opened {
+    &::before {
+      margin-top: 4px;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      margin-bottom: 4px;
+      transform: rotate(-45deg);
+    }
   }
 }

@@ -5,6 +5,7 @@
         "order/properties-alphabetical-order": true,
 
         "comment-no-empty": true,
-        "color-no-invalid-hex": true
+        "color-no-invalid-hex": true,
+        "block-no-empty": true
     }
 }

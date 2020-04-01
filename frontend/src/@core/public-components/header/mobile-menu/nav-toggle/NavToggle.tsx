@@ -11,5 +11,5 @@ type Props = {
 export const NavToggle: FC<Props> = ({ isOpen = false, onClick }) => {
   const classes = classNames(styles['nav-toggle'], { [styles['nav-toggle--opened']]: isOpen })
 
-  return <span className={classes} data-testid="NavToggle" onClick={onClick} />
+  return <span className={classes} onClick={onClick} data-testid="NavToggle" />
 }

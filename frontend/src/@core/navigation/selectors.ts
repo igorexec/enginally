@@ -1,5 +1,5 @@
 import { Selector } from '@reduxjs/toolkit'
-import { NavigationItem } from '@types-local/navigation'
+import { NavigationItem } from '@types-internal/navigation'
 import { NAVIGATION_KEY } from './constants'
 import { NavigationStore } from './types'
 

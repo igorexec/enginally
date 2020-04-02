@@ -1,4 +1,4 @@
-import { NavigationItem } from '@types-local/navigation'
+import { NavigationItem } from '@types-internal/navigation'
 import { NAVIGATION_KEY } from './constants'
 
 export type NavigationStore = {

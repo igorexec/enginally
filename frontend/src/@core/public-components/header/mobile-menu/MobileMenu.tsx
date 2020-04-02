@@ -1,5 +1,5 @@
 import React, { useState, FC } from 'react'
-import { NavigationItem } from '@types-local/navigation'
+import { NavigationItem } from '@types-internal/navigation'
 import { NavToggle } from './nav-toggle'
 import { NavMenu } from './nav-menu'
 import styles from './MobileMenu.module.scss'

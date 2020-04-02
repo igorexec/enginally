@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, fireEvent } from '@testing-library/react'
+import { fireEvent } from '@testing-library/react'
 import { renderWithRouter } from '__mocks__/router'
 import { NavMenu } from '../NavMenu'
 

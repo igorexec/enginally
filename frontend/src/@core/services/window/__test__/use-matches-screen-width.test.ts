@@ -1,6 +1,5 @@
 import { renderHook } from '@testing-library/react-hooks'
 import { mockWindowSize, mockMatchMedia } from '__mocks__/window'
-
 import { useMatchesScreenWidth } from '../use-matches-screen-width'
 
 beforeAll(() => {

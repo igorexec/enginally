@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { createMediaQuery } from '@core/lib/screen'
-
 import { useWindowWidth } from './use-window-width'
 
 export const useMatchesScreenWidth = ({ minWidth, maxWidth }: {minWidth?: number; maxWidth?: number;}) => {

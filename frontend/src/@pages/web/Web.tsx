@@ -1,6 +1,5 @@
 import React, { FC } from 'react'
 import { BrowserRouter, Switch, Route, Redirect, RouteComponentProps } from 'react-router-dom'
-
 import { EventLoop } from './event-loop'
 
 export const Web: FC<RouteComponentProps> = ({ match }) => {

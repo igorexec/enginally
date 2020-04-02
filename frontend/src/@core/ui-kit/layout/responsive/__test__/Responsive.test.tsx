@@ -1,7 +1,6 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 import { mockMatchMedia, mockWindowSize } from '__mocks__/window'
-
 import { Responsive } from '../Responsive'
 
 beforeAll(() => {

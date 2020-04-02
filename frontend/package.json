@@ -81,7 +81,8 @@
       "!src/serviceWorker.ts",
       "src/**/*.{ts,tsx}",
       "!src/**/index.ts",
-      "!@mocks/*"
+      "!src/__mocks__/*",
+      "!src/@app/*"
     ]
   }
 }

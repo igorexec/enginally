@@ -67,6 +67,7 @@
     "react/jsx-max-depth": ["error", {"max": 8}],
     "react/jsx-closing-tag-location": "error",
     "react/jsx-boolean-value": ["error", "never"],
+    "react/jsx-key": "error",
 
     "@typescript-eslint/semi": ["error", "never"],
     "@typescript-eslint/no-explicit-any": "error",

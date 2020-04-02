@@ -14,7 +14,7 @@ export const NavMenu: FC<Props> = ({ onItemClick, items = [] }) => {
   const linkClasses = styles['nav-menu__link']
 
   const navigation = items.map((item) => (
-    <li className={itemClasses}>
+    <li key={item?.pathname} className={itemClasses}>
       <NavLink to={item?.pathname} className={linkClasses} onClick={onItemClick}>{item?.title}</NavLink>
     </li>
   ))

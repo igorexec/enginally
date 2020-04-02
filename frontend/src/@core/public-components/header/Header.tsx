@@ -24,7 +24,7 @@ export const Header = () => {
         <MobileMenu navItems={navItems} />
       </Responsive>
       <Responsive minWidth={ScreenSizes.Large}>
-        <DesktopMenu />
+        <DesktopMenu navItems={navItems} />
       </Responsive>
     </header>
   )

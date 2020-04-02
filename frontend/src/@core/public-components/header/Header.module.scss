@@ -1,4 +1,5 @@
 @import "@configs/design/settings/colors.scss";
+@import "@configs/design/tools/media-queries.scss";
 
 .header {
   background: $light;
@@ -8,11 +9,24 @@
   justify-content: center;
   position: relative;
 
+  @include large-screen {
+    justify-content: flex-start;
+  }
+
   &__title {
     align-items: center;
     display: flex;
     font-size: 1.5rem;
     height: 100%;
     margin: 0;
+
+    @include large-screen {
+      padding: 0 20px;
+    }
+  }
+
+  &__link {
+    color: currentColor;
+    text-decoration: none;
   }
 }
